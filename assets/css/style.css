@@ -1,0 +1,32 @@
+{
+	border: 40px;
+	border-color: black;
+
+}
+
+html,body{
+
+	color: black;
+	background-image: url:("assets/images/gamebackground.jpg");
+	border-color: black;
+	font-size: 40px;
+	line-height: 36px;
+	font-family: 'Gloria Hallelujah', cursive;
+    background-repeat: no-repeat;
+    background-color: lightgray;  
+    height: 100%;  	
+}
+
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+.header{
+	columns: 
+}
+#game{
+	text-align: left;
+}
+
