@@ -6,71 +6,39 @@ var $ = function (id){
 
 //array
 
-  var game = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  var compChoice = Math.floor(Math.random()*26);
-  var answer = game[compChoice];
-  var myLength = answer.length;
-  var display =[myLength];
-  var letters = answer.split('');
-  var attemptsLeft = 9;
-  var output = "";
-  var userLetter = "";
+  var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  
+  var wins = 0;
+  var losses = 0;
+  var guesses = 9;
 
+  var computerChoice = letters[Math.floor(Math.random() * letters.length)];
 
+    console.log(computerChoice)
 
-var setup = function()
-{
-  for(var i=0; i< answer.length; i++)
-  {
-      display[i] = "_ ";
-      output = output + display[i];
-  }
-  document.getElementById("game").innerHTML = output;
-  output = "";
+document.onkeypress = function(event) {
+    var userGuess = event.key;
 
-}
-
-window.onload = function()
-{
-  setup()
-}
-
-
-}
-document.getElementById("game").innerHTML = output;
-output="";
-attemptsLeft--;
-
-if (win < 1)
-{
-    document.getElementById("Guesses").innerHTML = "You Win!";
-
-  }
-  else if (attemptsLeft < 1)
-  {
-      document.getElementById("Guesses").innerHTML = "You Lose!";
-  }
-  else
-  {
-      document.getElementById("Guesses").innerHTML= "You have " + attemptsLeft + "Guesses left";
+    if(userGuess === computerChoice){
+        wins++;
+    }else{
+        guesses--;
     }
 
-}
+    if(guesses === 0){
+        losses++
+    }
+
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+
+    document.getElementById('losses').innerHTML = "losses: " + losses;
+    
+    document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+
+}  
 
 
 
-///////////////////
-
-  var computerGuess;
-
-
-  function newGame() {
-    window.location.reload
-  }
-
-  function init() {
-    computerGuess= 
-  }
 
 
 

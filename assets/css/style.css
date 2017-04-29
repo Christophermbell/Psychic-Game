@@ -1,20 +1,21 @@
-{
-	border: 40px;
-	border-color: black;
 
-}
 
-html,body{
+body{
 
 	color: black;
-	background-image: url:("assets/images/gamebackground.jpg");
-	border-color: black;
+	background: url("http://wallpapercave.com/wp/nQxF1kq.jpg") no-repeat;
 	font-size: 40px;
 	line-height: 36px;
 	font-family: 'Gloria Hallelujah', cursive;
-    background-repeat: no-repeat;
-    background-color: lightgray;  
+    background-color: black;  
     height: 100%;  	
+}
+
+.letters{
+	color: red;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Shadows+Into+Light', cursive;
 }
 
 .container {
@@ -23,10 +24,50 @@ html,body{
   height: 100%;
   margin: 0 auto -4em;
 }
+
 .header{
-	columns: 
-}
-#game{
-	text-align: left;
+	font-size: 80px;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: red; 
 }
 
+.instructions{
+	font-size: 60px;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: red; 
+}
+
+#gametable{
+	text-align: left;
+	font-family: 'Shadows+Into+Light', cursive;
+	color: black;
+	font-size: 16px;
+}
+
+#wins{
+	text-align: left;
+	font-size: 16px;
+	font-family:  'Shadows+Into+Light', cursive;
+	color: black;
+}
+
+#losses{
+	text-align: left;
+	font-size: 16px;
+	font-family:  'Shadows+Into+Light', cursive;
+	color: black;
+}
+
+#Guesses-left{
+	text-align: left;
+	font-size: 16px;
+	font-family:  'Shadows+Into+Light', cursive;
+	color: black;
+}
+
+#soFar{
+	text-align: left;
+	font-size: 16px;
+	font-family:  'Shadows+Into+Light', cursive;
+	color: black;
+}
